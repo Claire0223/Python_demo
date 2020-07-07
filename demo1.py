@@ -23,7 +23,7 @@ def get_weatherForecast():
         'location':city,
         'key':'63d7ffe16c3743e1af28b8ad4423e5af'
 }
-    }
+    
     url=api+weather_type
     
     #str,需要转为dict
