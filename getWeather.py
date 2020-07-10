@@ -25,7 +25,7 @@ def get_data():
     weather_dict=weather_forecast()
     he_weather=weather_dict['HeWeather6']#['daily_forecast']#天气预报，list
     cityname=he_weather[0]['basic']['location']
-    daily_forecast=he_weather[0]['daily_forecast']
+    daily_forecast=he_weather[0]['basic']
     for i in range(len(daily_forecast)):
         date=daily_forecast[i]['date']
         cond_txt_d=daily_forecast[i]['cond_txt_d']
@@ -35,6 +35,7 @@ def get_data():
         wind_dir=daily_forecast[i]['wind_dir']
         weather_data=cityname+'  '+date+'  白天天气:'+cond_txt_d+'  晚上天气:'+cond_txt_n+'\n最高温:'+ tmp_max +'  最低温:'+tmp_min+'  风向:'+wind_dir
         print(weather_data)
+
 
 
 
